@@ -1,0 +1,228 @@
+/* 公共样式 */
+.b-s{
+    box-sizing: border-box;
+}
+.w-50{
+    width: 50%;
+}
+.w-25{
+    width: 25%;
+}
+.b-right{
+    border-right: 1px #eee solid;
+}
+.b-bottom{
+    border-bottom: 1px #eee solid;
+}
+body{
+    background: #eeeddd;
+}
+body::-webkit-scrollbar{
+    width:0;
+    height:0;
+}
+
+/* 头部固定条 */
+#top-fix{
+    width: 100%;
+    background:#FE5400;
+    padding: 6px 0;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+}
+#top-fix .icon-tao{
+    color: white;
+    font-size: 26px;
+    width: 1em;
+    line-height: 25px;
+}
+#top-fix .search{
+    color: white;
+    font-size: 14px;
+    line-height: 25px;
+    background: #B52600;
+    width: 90%;
+    height: 25px;
+    text-align: center;
+    border-radius: 4px;
+}
+/* 头部固定条end */
+/* 底部固定条 */
+#bottom-fix{
+    width: 100%;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+#bottom-fix > a{
+    width: 20%;
+    text-align: center;
+    padding-top: 6px;
+    border-top: 1px #eee solid;
+}
+#bottom-fix > a .iconfont{
+    font-size: 20px;
+    line-height: 22px;
+}
+/* 底部固定条end */
+/* 主体内容 */
+#container{
+    max-width: 640px;
+    min-width: 300px;
+    background: white;
+    height: 1600px;
+    margin: 37px auto 0;
+}
+/* banner部分 */
+.swiper-container {
+    width: 100%;
+    justify-content: space-between
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper-pagination-bullet-active{
+    background: #FE5400;
+}
+/* banner部分end */
+/* 首页主要入口 */
+.entrance{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.entrance li{
+    width: 20%;
+    padding-top: 4%;
+}
+.entrance li a{
+    display: block;
+    text-align: center;
+}
+.entrance li img{
+    width: 66%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 6%;
+}
+.entrance li a span{
+    display: block;
+}
+/* 首页主要入口end */
+/* 淘宝头条 */
+#toutiao{
+    width: 100%;
+    padding: 2% 0;
+    border-top: 1px #eeeddd solid;
+    border-bottom: 5px #eeeddd solid;
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-around;
+}
+.toutiao-bg{
+    width: 16%;
+    display: block;
+    padding: 0 2%;
+    border-right: 1px #eee solid;
+}
+.toutiao-bg img{
+    width: 100%;
+}
+.toutiao-mark{
+    color: #da0d15;
+    font-size: 14px;
+    border: 1px #da0d15 solid;
+    padding: 0 1%;
+    border-radius: 6px;
+}
+.news-list{
+    width: 60%;
+    height: 1.3rem;
+    overflow: hidden;
+}
+.news-list a{
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+/* 淘宝头条end */
+/* 商品 */
+.rushbuy > a > img, .mall > a > img{
+    width:100%;
+}
+.rushbuy, .mall{
+    border-bottom: 8px #eee solid;
+}
+.mall .title > img, .guess .title > img{
+    width: 5%;
+    margin-left: 38%;
+}
+.mall .title{
+    color: #da0d15;
+    font-size: 16px;
+    line-height: 36px;
+}
+/* 猜你喜欢 */
+.guess{
+    background: #eee;
+}
+/* 标题 */
+.guess .title{
+    padding: 6px 0;
+}
+.guess .title > p{
+    text-align: center;
+    font-size: 14px;
+}
+/* 商品 */
+.guess .product{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.guess .product > a{
+    width: 49.5%;
+    background: white;
+    margin-bottom: 3px;
+}
+.guess .product > a > img{
+    width: 100%;
+}
+.guess .product > a > p{
+    padding: 5px 5%;
+}
+.guess .product .pd-price{
+    color: #FE5400;
+    font-size: 16px;
+}
+/* 猜你喜欢end */
+/* 页尾 */
+#pagebottom{
+    background: #4e525e;
+    padding: 5% 0;
+    margin-bottom: 47px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.buttons a{
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 3em;
+    padding: 0 3%;
+    border: 2px #42454d solid;
+    border-radius: 8px;
+}
+.copyright{
+    color: #ccc;
+    text-align: center;
+    margin-top: 3%;
+}

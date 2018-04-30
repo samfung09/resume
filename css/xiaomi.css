@@ -1,0 +1,591 @@
+.w{
+    width: 1226px;
+}
+/* 网页顶部条 */
+#topbar{
+    background: #333;
+}
+#topbar a{
+    color: #b0b0b0;
+    line-height: 40px;
+}
+#topbar a:hover{
+    color: white;
+}
+#topbar .spacer{
+    margin: 0 4px;
+}
+.topbar-nav{
+    float: left;
+}
+/* 购物车 */
+.topbar-cart{
+    width: 120px;
+    height: 40px;
+    background: #424242;
+    float: right;
+    text-align: center;
+    position: relative;
+    margin-left: 15px;
+}
+.topbar-cart > a{
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.topbar-cart .cart-dropdown{
+    width: 316px;
+    height: 100px;
+    background: white;
+    line-height: 100px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: none;
+}
+#topbar .topbar-cart:hover > a{
+    background: white;
+    color: #ff6700;
+    padding-bottom: 2px;
+}
+#topbar .topbar-cart:hover .cart-dropdown{
+    display: block;
+}
+.topbar-info{
+    float: right;
+}
+/* 页面头部 */
+#header{
+    position: relative;
+}
+#header > .w{
+    height: 100px;
+    overflow: hidden;
+}
+.header-logo{
+    width: 49px;
+    height: 49px;
+    background:#ff6700;
+    margin-top: 22px;
+    float: left;
+}
+.header-logo a{
+    display: block;
+}
+.header-nav{
+    float: left;
+    margin-left: 180px;
+}
+.header-nav .nav-item{
+    float: left;
+    padding: 0 10px;
+}
+.header-nav .nav-item a{
+    line-height: 100px;
+    font-size: 16px;
+    color: #333;
+}
+.header-nav .nav-item a:hover{
+    color: #ff6700;
+}
+/* 搜索框 */
+#search{
+    float: right;
+    width: 297px;
+    margin-top: 25px;
+}
+#search .search-txt{
+    width: 223px;
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+}
+#search button{
+    width: 52px;
+    height: 50px;
+    background: none;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    float: right;
+}
+#search button:hover{
+    background: #ff6700;
+    color: white;
+}
+/* 头部导航下拉列表 */
+.nav-menu{
+    width: 100%;
+    height: 229px;
+    border-top: 1px solid #e0e0e0;
+    position: absolute;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.18);
+    display: none;
+    left: 0;
+    top: 100px;
+    background: white;
+    z-index: 22;
+}
+.menu-item{
+    float: left;
+    width: 180px;
+    padding-top: 35px;
+}
+.menu-item p{
+    text-align: center;
+}
+.menu-list{
+    display: none;
+}
+/* 页面焦点部分 */
+#site-focus .hd{
+    height: 460px;
+    position: relative;
+}
+/* 左侧分类导航 */
+.cate{
+    width: 234px;
+    height: 460px;
+    position: absolute;
+    z-index: 21;
+    background: rgba(0,0,0,0.5);
+}
+.cate .cate-menu{
+    padding: 20px 0;
+}
+.cate .cate-menu-item{
+    line-height: 42px;
+}
+.cate .cate-menu-item a{
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 0 20px;
+}
+.cate .cate-menu-item a span{
+    float: right;
+}
+.cate .cate-menu-item.active{
+    background: #ff6700;
+}
+.cate-con{
+    width: 795px;
+    height: 460px;
+    background: white;
+    color: #ff6700;
+    font-size: 36px;
+    text-align: center;
+    line-height: 460px;
+    position: absolute;
+    top: 0;
+    left: 234px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+    display: none;
+}
+/* banner */
+.banner .banner-item{
+    position: absolute;
+    display: none;
+}
+.banner-ind{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.banner-ind-item{
+    width: 6px;
+    height: 6px;
+    background: #333;
+    border:2px #aaaaaa solid;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.banner-ind-item.active{
+    background: white;
+}
+/* 左右按钮 */
+.banner .btn{
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    color: #ccc;
+    font-size: 36px;
+    text-align: center;
+    line-height: 70px;
+    top: 50%;
+    margin-top: -35px;
+}
+.banner .btn:hover{
+    background: rgba(0,0,0,0.5);
+}
+.banner .btn-prev{
+    left: 234px;
+}
+.banner .btn-next{
+    right: 0;
+}
+/* 页面焦点底部 */
+#site-focus .ft{
+    margin-top: 14px;
+}
+#site-focus .ft .col{
+    float: left;
+}
+#site-focus .ft .col1{
+    width: 228px;
+    padding: 3px;
+    background: #5f5750;
+}
+#site-focus .ft .col1 li{
+    width: 76px;
+    height: 82px;
+    float: left;
+}
+#site-focus .ft .col1 li a{
+    display: block;
+    text-align: center;
+    color: #ccc;
+}
+#site-focus .ft .col1 li a .iconfont{
+    font-size: 36px;
+    display: block;
+}
+#site-focus .ft .col1 li a:hover{
+    color: white;
+}
+/* 右列 */
+#site-focus .ft .col2 li{
+    float: left;
+    margin-left: 14px;
+}
+/* 小米明星单品 */
+/* 头部 */
+.star-goods{
+    margin-top: 26px;
+}
+.star-goods .tit{
+    float: left;
+    line-height: 58px;
+    font-size: 22px;
+    color: #333;
+}
+.star-goods .btn{
+    float: right;
+    margin-top: 20px;
+}
+.star-goods .btn a{
+    border: 1px #ccc solid;
+    float: left;
+    padding: 0 15px;
+    line-height: 25px;
+    font-size: 20px;
+}
+/* 内容 */
+.star-goods .bd{
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+}
+.star-goods-bar{
+    width: 2600px;
+    position: absolute;
+    left: 0;
+}
+.star-goods-list{
+    float: left;
+}
+.star-goods-item{
+    width: 234px;
+    height: 300px;
+    background: #fafafa;
+    padding-top: 39px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+    margin-right: 14px;
+}
+.star-goods-item:first-child{
+    border-top: 1px #ffac13 solid;
+}
+.star-goods-item:nth-of-type(2){
+    border-top: 1px #83c44e solid;
+}
+.star-goods-item:nth-of-type(3){
+    border-top: 1px #2196f3 solid;
+}
+.star-goods-item:nth-of-type(4){
+    border-top: 1px #e53935 solid;
+}
+.star-goods-item:last-child{
+    margin-right: 0;
+    border-top: 1px #00c0a5 solid;
+}
+.star-goods-item > a{
+    width: 160px;
+    display: block;
+    margin: 0 auto 22px;
+}
+.star-goods-item .name{
+    color: black;
+}
+.star-goods-item .desc{
+    color: #ccc;
+}
+.star-goods-item .price{
+    color: #ff6700;
+}
+/* 楼层 */
+#xiaomi-f{
+    padding-top: 60px;
+    background: #f5f5f5;
+}
+.f{
+    margin-bottom: 15px;
+}
+.f4{
+    margin-bottom: 0;
+}
+/* 楼层头部 */
+.f .f-hd{
+    color: #333;
+}
+.f .f-tit{
+    float: left;
+    font-size: 22px;
+    line-height: 58px;
+}
+.f .f-tab-ind{
+    float: right;
+    padding-top: 16px;
+}
+.f .f-tab-ind-item{
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.f .f-tab-ind-item.active{
+    color: #ff6700;
+    border-bottom: 2px #ff6700 solid;
+}
+/* 楼层内容 */
+.f .f-bd .col{
+    float: left;
+}
+.f .f-bd .col1 .first{
+    margin-bottom: 14px;
+}
+.f .f-bd .col2{
+    width: 992px;
+}
+.f .f-bd .col2 .f-tab-item{
+    display: none;
+}
+.f .f-bd .f-tab-goods{
+    float: left;
+    width: 234px;
+    text-align: center;
+    color: #aaa;
+    background: white;
+    padding: 35px 0 30px;
+    margin: 0 0 14px 14px;
+    position: relative;
+    overflow: hidden;
+}
+.f .f-bd .f-tab-goods .name{
+    color: #333;
+    margin-top: 18px;
+}
+.f .f-bd .f-tab-goods .price{
+    margin-top: 10px;
+}
+.f .f-bd .f-tab-goods .comment{
+    padding: 8px 30px;
+    background: #ff6700;
+    color: white;
+    position: absolute;
+    bottom: -70px;
+    transition: 0.2s;
+}
+.f .f-bd .f-tab-goods:hover .comment{
+    bottom: 0;
+}
+/* 楼层商品最后两个小的 */
+.f .f-bd .f-tab-goods.s{
+    height: 78px;
+}
+.f .f-bd .f-tab-goods.goods-s1 > a{
+    display: block;
+    float: right;
+    margin-right: 20px;
+}
+.f .f-bd .f-tab-goods.goods-s2 a{
+    font-size: 18px;
+}
+.f .f-bd .f-tab-goods.goods-s2 .iconfont{
+    font-size: 46px;
+    color: #ff6700;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+.f .f-bd li{
+    transition: 0.2s;
+}
+.f .f-bd li:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* 视频 */
+#video{
+    background: #f5f5f5;
+    padding: 15px 0 60px;
+}
+#video .hd{
+    color: #333;
+    line-height: 58px;
+}
+#video .hd .title{
+    float: left;
+    font-size: 22px;
+}
+#video .hd .more{
+    float: right;
+    font-size: 16px;
+}
+#video .hd .more .iconfont{
+    font-size: 26px;
+    vertical-align: middle;
+}
+#video .hd .more a:hover{
+    color: #ff6700;
+}
+/* 视频列表 */
+.video-item{
+    float: left;
+    width: 296px;
+    background: white;
+    text-align: center;
+    line-height: 26px;
+    padding-bottom: 30px;
+    margin-right: 14px;
+    transition: 0.2s;
+}
+.video-item:last-child{
+    margin-right: 0;
+}
+.video-item > a{
+    display: block;
+    position: relative;
+    margin-bottom: 28px;
+}
+.video-item > a span{
+    width: 40px;
+    height: 26px;
+    border: 2px white solid;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    text-align: center;
+    color: white;
+}
+.video-item > a:hover span{
+    border-color: #ff6700;
+    background: #ff6700;
+}
+.video-item .title a{
+    color: #333;
+}
+.video-item .title a:hover{
+    color: #ff6700;
+}
+.video-item .desc{
+    color: #aaa;
+}
+.video-item:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* 页面底部 */
+#footer{
+    background:white;
+}
+.ft-service{
+    padding: 20px 0;
+    border-bottom: 1px #ccc solid;
+}
+.ft-service li{
+    float: left;
+    width: 19.8%;
+    font-size: 16px;
+    text-align: center;
+    line-height: 26px;
+    border-right: 1px #ccc solid;
+}
+.ft-service li .iconfont{
+    font-size: 24px;
+    vertical-align: middle;
+}
+#footer a:hover{
+    color: #ff6700;
+}
+/* 帮助 */
+.ft-help{
+    padding: 40px 0;
+}
+.ft-help dl{
+    float: left;
+    width: 160px;
+}
+.ft-help dl dt{
+    margin-bottom: 26px;
+}
+.ft-help dl dd{
+    line-height: 26px;
+}
+.ft-help .contact{
+    float: right;
+    width: 251px;
+    border-left: 1px #ccc solid;
+    text-align: center;
+}
+.ft-help .contact p:last-child{
+    margin-top: 20px;
+}
+.ft-help .contact a{
+    color: #ff6700;
+    border: 1px #ff6700 solid;
+    padding: 5px 10px;
+}
+.ft-help .contact a:hover{
+    color: white;
+    background: #ff6700;
+}
+/* ft-copyright */
+.ft-logo{
+    width: 57px;
+    height: 57px;
+    background: #ff6700;
+    margin-right: 10px;
+    float: left;
+}
+.ft-logo img{
+    margin: 8px 0 0 5px;
+}
+.ft-copyright .text{
+    float: left;
+    width: 90%;
+    text-align: center;
+}
+.ft-copyright .text .spacer{
+    margin: 0 5px;
+}
+.ft-copyright .text p:nth-of-type(2), .ft-copyright .text p:nth-of-type(2) a{
+    color: #aaa;
+}
+.slogan{
+    height: 100px;
+    background: url(../images/xiaomi/slogan.png) no-repeat center center;
+}

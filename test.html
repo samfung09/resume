@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!-- <script src="js/test.js"></script> -->
+    <style>
+        .news-wrapper{
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px red solid;
+            position: fixed;
+            right: 100px;
+            overflow: hidden;
+        }
+        .news-list{
+            margin: 0;
+            list-style: none;
+            animation: lunbo 12s infinite;
+        }
+        @keyframes lunbo{
+            0%,9%{margin-top: 0}
+            12%,29%{margin-top: -30px}
+            32%,49%{margin-top: -60px}
+            52%,69%{margin-top: -90px}
+            72%,89%{margin-top: -120px}
+            92%,100%{margin-top: -150px}
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="box" style="width:100px; height:100px; background:red; position:absolute; left:0;"></div> -->
+    <div class="news-wrapper">
+        <ul class="news-list">
+            <li class="news-item">星期一</li>
+            <li class="news-item">星期二</li>
+            <li class="news-item">星期三</li>
+            <li class="news-item">星期四</li>
+            <li class="news-item">星期五</li>
+            <li class="news-item">星期一</li>
+        </ul>
+    </div>
+    <script>
+        var sb = '00003.69'
+        // alert(Number(sb));
+        // alert(parseInt(sb));
+        // alert(parseFloat(sb));
+        // alert(isNaN(sb));
+        // alert(sb.length);
+        // var arr = new Array(1,2,3);
+        // var fn = function move(){};
+        // alert(typeof fn);
+        // alert(Object.prototype.toString.call(fn));
+
+        // 构造函数
+        function phone(){
+            this.size = '5.5吋';
+            this.color = '土豪金';
+            this.price = '9998元';
+            this.call = function(){
+                alert('您所拨打的用户正在通话中');
+            }
+            alert('hahahaha')
+            return undefined;       // 如果返回一个对象结果不同
+        }
+        var iphone = new phone();
+        // alert(iphone.size);
+        // iphone.call();
+        for(var item in iphone){
+            document.write(iphone[item]+'<br>');
+        }
+
+        var str = 'ooooo';
+        var str1 = 'lllll';
+        // alert(str.slice(0,2));
+        // alert(str.concat(str1));
+        var i = 6;
+        // function time(){
+        // 	i--;
+        // 	if(i<=0){
+        // 		window.location = 'http://taobao.com';
+        // 	}else{
+        // 		document.body.innerHTML = '';
+        // 		document.write(i+'秒之后自动跳转');
+        // 		t = setTimeout(time,1000);
+        // 	}
+        // }
+        // time();
+
+        var oBox = document.getElementById('box');
+        // function move(){
+        //     var speed = 9;
+        //     setInterval(function(){
+        //         var curr = parseFloat(oBox.style.left);
+        //         oBox.style.left = curr+speed+'px';
+        //         if(parseFloat(oBox.style.left) >= 600){
+        //             alert(parseFloat(oBox.style.left));
+        //         }
+        //     },30)
+            
+        //     //oBox.style.left = parseFloat(oBox.style.left)+speed+'px';
+        // }
+        // document.onclick = function(){
+        //     move();
+        //     //alert(oBox.style.right);
+        // }
+
+        // alert(oBox.currentStyle.left);
+        // alert(getComputedStyle(oBox).left)
+        // alert(document.all);
+        // if(document.all){
+        //     alert('this is IE');
+        // }else{
+        //     alert('other browser');
+        // }
+
+        // var num = 10;
+        // function changeNum(n){
+        //     n = 100;
+        // }
+        // changeNum(num);
+        // alert(num);
+
+        // function test(){
+        //     alert('这是一条测试信息')
+        // }
+        // test();
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>canvas画板</title>
+    <style>
+        canvas {
+            background:black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //抓到画板
+            var canvas = document.getElementById('canvas');
+            //获得绘画环境
+            var cv = canvas.getContext('2d');
+            //设置画笔样式
+            cv.strokeStyle = 'yellow';
+            cv.lineWidth = 10;
+            // cv.globalCompositeOperation = 'source-atop';
+            
+            canvas.onmousedown = function (e) {
+                e = e || event;
+                var startL = e.offsetX || e.layerX;
+                var startT = e.offsetY || e.layerY;
+                //开始路径
+                cv.beginPath();
+                cv.lineJoin = 'round';
+                //起始点
+                cv.moveTo(startL, startT);
+
+                canvas.onmousemove = function (e) {
+                    e = e || event;
+                    var nowL = e.offsetX || e.layerX;
+                    var nowT = e.offsetY || e.layerY;
+                    //画到
+                    cv.lineTo(nowL, nowT);
+                    //绘画
+                    cv.stroke();
+                }
+
+                document.onmouseup = function () {
+                    // canvas.onmousedown = null;
+                    canvas.onmousemove = null;
+                }
+            }
+
+            //可选颜色
+            document.getElementById('color').onchange = function () {
+                cv.strokeStyle = this.value;
+            }
+            //画笔粗细
+            document.getElementById('cuxi').onchange = function () {
+                cv.lineWidth = this.value;
+                document.getElementById('cx').innerHTML = this.value;
+            }
+            //橡皮檫
+            document.getElementById('xpc').onclick = function () {
+                alert('已选中橡皮檫');
+                cv.strokeStyle = 'black';
+            }
+           
+        }
+    </script>
+</head>
+<body>
+    <input type="color" id="color" value="#ffff00" />
+    <input type="range" id="cuxi" min="1" max="50" step="1" value="10" />
+    <span id="cx">10</span>
+    <input type="button" value="橡皮檫" id="xpc" />
+    <br /><br />
+    <canvas id="canvas" width="1000" height="500"></canvas>
+</body>
+</html>

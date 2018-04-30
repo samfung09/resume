@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        line-height: 200px;
+        /* Center slide text vertically */
+        /* display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; */
+    }
+    /* .swiper-slide p{
+        animation-duration: 0.5s;
+    } */
+    .swiper-slide p:nth-of-type(1){
+        animation-delay: 0.5s;
+    }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background:#22b573;">
+                <p class="animated bounceInDown">Slide 1</p>
+                <img class="slideInLeft animated" src="images/index/avatar.jpg" width="200" alt="" style="border-radius:50%; box-shadow:0 0 20px rgba(255,255,255,1)">
+            </div>
+            <div class="swiper-slide" style="background:orange;">
+                <p class="bounceInDown">Slide 1</p>
+                <p class="bounceInDown">这是从左边滑出</p>
+            </div>
+            <div class="swiper-slide" style="background:red;">
+                <p class="bounceInDown">Slide 1</p>
+                <p class="slideInLeft">这是从左边滑出</p>
+            </div>
+            <div class="swiper-slide" style="background:hotpink">
+                <p class="bounceInDown">Slide 1</p>
+                <p class="slideInLeft">这是从左边滑出</p>
+            </div>
+            <div class="swiper-slide" style="background:pink">
+                <p class="bounceInDown">Slide 1</p>
+                <p class="slideInLeft">这是从左边滑出</p>
+            </div>
+            <div class="swiper-slide" style="background:#ccc;">
+                <p class="bounceInDown">Slide 1</p>
+                <p class="slideInLeft">这是从左边滑出</p>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        $('.swiper-slide').eq(1).find('p').hide();
+        
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        // spaceBetween: 30,
+        mousewheelControl: true,
+        onSlideChangeEnd: function(swiper){
+            //alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
+            // $('.swiper-slide').eq(swiper.activeIndex).find('p').hide();
+            // setTimeout(function(){
+            //     $('.swiper-slide').eq(swiper.activeIndex).find('p').show().addClass('animated');
+            // },100)
+            $('.swiper-slide').eq(swiper.activeIndex).find('p').addClass('animated').show();
+            $('.swiper-slide').eq(swiper.activeIndex).siblings().find('p').hide();
+        }
+    });
+    </script>
+</body>
+</html>
